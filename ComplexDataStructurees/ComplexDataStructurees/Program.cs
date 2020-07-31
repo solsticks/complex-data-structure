@@ -8,11 +8,8 @@ namespace ComplexDataStructurees
         {
             var list = new LinkedList();
             list.AddLast(24);
-            list.AddLast(12);
-             
-           // list.PrintAllNodes();
-            list.Check(24); 
-            //list.empty();  
+            list.empty();
+            Console.WriteLine(list.Size()); 
         }
     }
 }

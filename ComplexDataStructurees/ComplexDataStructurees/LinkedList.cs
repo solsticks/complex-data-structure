@@ -65,19 +65,16 @@ namespace ComplexDataStructurees
             Nodes curr = Head;
             while (curr.Next != null)
             {
-                curr = curr.Next;
-               if (ReferenceEquals(curr.Value,data))
-                {
-                    Console.WriteLine("I am here");
-                }
-              
-               else
-                {
-                    Console.WriteLine("look again");
-                    
-                }
-                
 
+                curr = curr.Next;
+
+                if (curr.Value.Equals(data))
+                {
+                    Console.WriteLine(true);
+                    break;
+                }
+                else
+                    Console.WriteLine(false);
             }
                                            
         }
