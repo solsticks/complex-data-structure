@@ -1,0 +1,13 @@
+C:\Users\hp\source\repos\solsticks\complex-data-structure\ComplexDataStructurees\ComplexDataStructurees\bin\Debug\netcoreapp3.1\ComplexDataStructurees.exe
+C:\Users\hp\source\repos\solsticks\complex-data-structure\ComplexDataStructurees\ComplexDataStructurees\bin\Debug\netcoreapp3.1\ComplexDataStructurees.deps.json
+C:\Users\hp\source\repos\solsticks\complex-data-structure\ComplexDataStructurees\ComplexDataStructurees\bin\Debug\netcoreapp3.1\ComplexDataStructurees.runtimeconfig.json
+C:\Users\hp\source\repos\solsticks\complex-data-structure\ComplexDataStructurees\ComplexDataStructurees\bin\Debug\netcoreapp3.1\ComplexDataStructurees.runtimeconfig.dev.json
+C:\Users\hp\source\repos\solsticks\complex-data-structure\ComplexDataStructurees\ComplexDataStructurees\bin\Debug\netcoreapp3.1\ComplexDataStructurees.dll
+C:\Users\hp\source\repos\solsticks\complex-data-structure\ComplexDataStructurees\ComplexDataStructurees\bin\Debug\netcoreapp3.1\ComplexDataStructurees.pdb
+C:\Users\hp\source\repos\solsticks\complex-data-structure\ComplexDataStructurees\ComplexDataStructurees\obj\Debug\netcoreapp3.1\ComplexDataStructurees.csprojAssemblyReference.cache
+C:\Users\hp\source\repos\solsticks\complex-data-structure\ComplexDataStructurees\ComplexDataStructurees\obj\Debug\netcoreapp3.1\ComplexDataStructurees.AssemblyInfoInputs.cache
+C:\Users\hp\source\repos\solsticks\complex-data-structure\ComplexDataStructurees\ComplexDataStructurees\obj\Debug\netcoreapp3.1\ComplexDataStructurees.AssemblyInfo.cs
+C:\Users\hp\source\repos\solsticks\complex-data-structure\ComplexDataStructurees\ComplexDataStructurees\obj\Debug\netcoreapp3.1\ComplexDataStructurees.csproj.CoreCompileInputs.cache
+C:\Users\hp\source\repos\solsticks\complex-data-structure\ComplexDataStructurees\ComplexDataStructurees\obj\Debug\netcoreapp3.1\ComplexDataStructurees.dll
+C:\Users\hp\source\repos\solsticks\complex-data-structure\ComplexDataStructurees\ComplexDataStructurees\obj\Debug\netcoreapp3.1\ComplexDataStructurees.pdb
+C:\Users\hp\source\repos\solsticks\complex-data-structure\ComplexDataStructurees\ComplexDataStructurees\obj\Debug\netcoreapp3.1\ComplexDataStructurees.genruntimeconfig.cache
