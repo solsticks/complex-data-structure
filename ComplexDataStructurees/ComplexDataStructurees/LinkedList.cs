@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualBasic;
 using System;
 using System.Collections.Generic;
+using System.Security.Authentication.ExtendedProtection;
 using System.Text;
 
 namespace ComplexDataStructurees
@@ -12,7 +13,7 @@ namespace ComplexDataStructurees
         public bool isEmpty { get; private set; }
 
         public int Count { get; private set; } // this takes the number of elements in my list
-
+       
         public LinkedList() // this constructor initializes my first node and last node are the same when the list is empty.
         {
             Head = new Nodes();
@@ -79,6 +80,23 @@ namespace ComplexDataStructurees
                                            
         }
 
+        public int index(object data) // this methods is used to generate the index of an element in the linked list
+        {
+            int iCount = 0;
+            Nodes curr = Head;
+            while (curr.Next != null)
+            {
+                curr = curr.Next;
+                iCount++;
+                if (curr.Value.Equals(data))
+                {
+                    return iCount;
+                }
+                return -1;
+            }
+            return iCount;
+        }
+
         public void Exist(object data) // this method looks through the list for a specified item and returns it if found.
         {
 
@@ -86,7 +104,7 @@ namespace ComplexDataStructurees
             while (curr.Next != null)
             {
                 curr = curr.Next;
-                if (curr.Value == data)
+                if (curr.Value.Equals(data))
                 {
                     Console.WriteLine(data); ;
                 }
