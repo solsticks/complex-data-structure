@@ -103,7 +103,7 @@ namespace ComplexDataStructurees
                    // Console.WriteLine(curr.Value);
                     temp.Next = curr;                    
                 }                
-                else if (index - iCount > 1)
+                else if (index - iCount >= 1)
                 {
                     Console.WriteLine("Unreachable index");
                     break;
