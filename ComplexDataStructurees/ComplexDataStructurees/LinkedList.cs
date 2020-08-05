@@ -6,24 +6,24 @@ using System.Text;
 
 namespace ComplexDataStructurees
 {
-    public class LinkedList
+    public class LinkedList<T>
     {
-        public Nodes Head { get; set; } // This is the first node in my list
-        public Nodes Tail { get; set; } // this is the last node in my list
+        public Nodes<T> Head { get; set; } // This is the first node in my list
+        public Nodes<T> Tail { get; set; } // this is the last node in my list
         public bool isEmpty { get; private set; }
 
         public int Count { get; private set; } // this takes the number of elements in my list
        
         public LinkedList() // this constructor initializes my first node and last node are the same when the list is empty.
         {
-            Head = new Nodes();
+            Head = new Nodes<T>();
             Tail = Head;
             
         }
 
-        public void AddLast(object data) // this method will add an element to the end of the list i.e to the tail node.
+        public void AddLast(T data) // this method will add an element to the end of the list i.e to the tail node.
         {
-            Nodes newNode = new Nodes();
+            Nodes<T> newNode = new Nodes<T>();
             newNode.Value = data;
             Tail.Next = newNode;
             Tail = newNode;
@@ -47,23 +47,28 @@ namespace ComplexDataStructurees
             Console.WriteLine(isEmpty);
         }
 
-        public Nodes Remove()// this method removes the last node
+        public Nodes<T> Remove()// this method removes the last node
         {
             if (Head == null) return null;
             if (Head.Next == null) return null;
 
-            var second_Last = Head;
-            while(second_Last.Next.Next != null)
-                second_Last = second_Last.Next;
-               
-            second_Last.Next = null;
-            Count--;
-            return Head;            
+            var current = Head;
+            var second_Last = current;
+            while (current.Next != null)
+            {
+                second_Last = current;
+                current = current.Next;
+            }
+            Tail = second_Last;
+            Tail.Next = null;
+
+            return current;
+            
         }
 
-        public void Check(object data) // this methods checks for an item and returns true if found, false if not found.
+        public void Check(T data) // this methods checks for an item and returns true if found, false if not found.
         {            
-            Nodes curr = Head;
+            Nodes<T> curr = Head;
             while (curr.Next != null)
             {
 
@@ -80,27 +85,40 @@ namespace ComplexDataStructurees
                                            
         }
 
-        public int index(object data) // this methods is used to generate the index of an element in the linked list
+        public Nodes<T> insertAt(int index, T data) // this methods adds the element at specified index
         {
             int iCount = 0;
-            Nodes curr = Head;
+            Nodes<T> curr = Head;
+            var prev = curr;
+            var temp = new Nodes<T>();
+            temp.Value = data;
             while (curr.Next != null)
             {
+                prev = curr;
                 curr = curr.Next;
-                iCount++;
-                if (curr.Value.Equals(data))
+                //iCount++;
+                if (iCount.Equals(index))
                 {
-                    return iCount;
+                    prev.Next = temp;
+                   // Console.WriteLine(curr.Value);
+                    temp.Next = curr;                    
+                }                
+                else if (index - iCount > 1)
+                {
+                    Console.WriteLine("Unreachable index");
+                    break;
                 }
-                return -1;
+                iCount++;
+                Console.WriteLine(iCount);
             }
-            return iCount;
+            //Console.WriteLine(index);
+            return curr;
         }
 
-        public void Exist(object data) // this method looks through the list for a specified item and returns it if found.
+        public void Exist(T data) // this method looks through the list for a specified item and returns it if found.
         {
 
-            Nodes curr = Head;
+            Nodes<T> curr = Head;
             while (curr.Next != null)
             {
                 curr = curr.Next;
@@ -114,10 +132,8 @@ namespace ComplexDataStructurees
 
         
         public void PrintAllNodes()
-        {
-            //Traverse from head
-            
-            Nodes curr = Head;
+        { //Traverse from head            
+            Nodes<T> curr = Head;
             while (curr.Next != null)
             {
                 curr = curr.Next;

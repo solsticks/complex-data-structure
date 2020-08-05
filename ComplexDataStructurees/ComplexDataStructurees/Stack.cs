@@ -71,7 +71,7 @@ namespace StackImplementation
 				Console.WriteLine("The topmost element of Stack is : {0}", stack[top]); 
 		} 
 
-		public void Print() 
+		public void Print() // this method displays all the element in the stack
 		{ 
 			if (top < 0) 
 			{ 
