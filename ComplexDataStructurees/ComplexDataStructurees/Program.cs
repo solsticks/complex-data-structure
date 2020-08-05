@@ -12,11 +12,11 @@ namespace ComplexDataStructurees
             list.AddLast(25);
             list.AddLast(56);
             list.AddLast(45);
-            //list.insertAt(6, 25);
+            list.insertAt(2, 12);
 
             // list.Search(25);
             // Console.WriteLine(list.check(100)); 
-            list.IndexOf(25);
+           // list.IndexOf(25);
              
 
             //list.RemoveAt(1);

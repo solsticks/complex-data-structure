@@ -111,23 +111,16 @@ namespace ComplexDataStructurees
             while (curr.Next != null)
             {
                 prev = curr;
-                curr = curr.Next;
-                //iCount++;
+                curr = curr.Next;                
                 if (iCount.Equals(index))
                 {
-                    prev.Next = temp;
-                   // Console.WriteLine(curr.Value);
-                    temp.Next = curr;                    
-                }                
-                else if (index - iCount >= 1)
-                {
-                    Console.WriteLine("Unreachable index");
-                    break;
-                }
-                iCount++;
-                Console.WriteLine(iCount);
+                    prev.Next= temp;                    
+                    temp.Next = curr;
+                    break;                   
+                }                           
+                iCount++;                 
             }
-            //Console.WriteLine(index);
+           // Console.WriteLine("Unreachable index");            ;
             return curr;
         }
 
