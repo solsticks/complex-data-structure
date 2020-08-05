@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualBasic;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.Tracing;
 using System.Security.Authentication.ExtendedProtection;
 using System.Text;
 
@@ -81,6 +82,23 @@ namespace ComplexDataStructurees
                 }                
             }
             return res;
+        }
+
+        public void IndexOf(T data)
+        {
+            int eCount = -1;
+            var current = Head;
+            while(current.Next != null)
+            {
+                eCount++;
+                current = current.Next;
+                if (current.Value.Equals(data))
+                {
+                    Console.WriteLine(eCount);
+                    return;
+                }
+            }
+            Console.WriteLine("-1");
         }
 
         public Nodes<T> insertAt(int index, T data) // this methods adds the element at specified index
