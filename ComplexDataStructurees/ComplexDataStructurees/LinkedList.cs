@@ -66,23 +66,21 @@ namespace ComplexDataStructurees
             
         }
 
-        public void Check(T data) // this methods checks for an item and returns true if found, false if not found.
-        {            
+        public bool check(T data) // this method looks through the list for a specified item and returns true if found.
+        {
+            bool res = false;
             Nodes<T> curr = Head;
             while (curr.Next != null)
             {
-
+               
                 curr = curr.Next;
-
                 if (curr.Value.Equals(data))
                 {
-                    Console.WriteLine(true);
+                    res = true;
                     break;
-                }
-                else
-                    Console.WriteLine(false);
+                }                
             }
-                                           
+            return res;
         }
 
         public Nodes<T> insertAt(int index, T data) // this methods adds the element at specified index
@@ -115,7 +113,7 @@ namespace ComplexDataStructurees
             return curr;
         }
 
-        public void Exist(T data) // this method looks through the list for a specified item and returns it if found.
+        public void Search(T data) // this method looks through the list for a specified item and returns it if found.
         {
 
             Nodes<T> curr = Head;
@@ -124,10 +122,11 @@ namespace ComplexDataStructurees
                 curr = curr.Next;
                 if (curr.Value.Equals(data))
                 {
-                    Console.WriteLine(data); ;
+                    Console.WriteLine(data);
+                    break;
                 }
-            }
-            Console.WriteLine("The element does not exist in the list!"); ;
+                Console.WriteLine("-1");                
+            }            
         }
 
         
