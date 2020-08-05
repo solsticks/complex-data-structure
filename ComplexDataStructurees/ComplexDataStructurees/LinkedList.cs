@@ -123,9 +123,13 @@ namespace ComplexDataStructurees
                 if (curr.Value.Equals(data))
                 {
                     Console.WriteLine(data);
-                    break;
-                }
-                Console.WriteLine("-1");                
+                    return;
+                }                              
+            }
+            if (curr.Next == null)
+            {
+                Console.WriteLine("-1");
+                return;
             }            
         }
 
