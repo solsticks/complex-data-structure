@@ -8,26 +8,26 @@ namespace ComplexDataStructurees
 	using System;
     using System.Runtime.ExceptionServices;
 
-    public class Queue
+    public class Queue <T>
 	{
 		private static int front;
 		private static int last; 
 		private static int size;
-		private static int[] queue;
+		private static T[] queue;
 
 		public Queue(int s)
 		{
-			front = last = 0;
+			front = last;
 			size = s;
-			queue = new int[size];
+			queue = new T[size];
 		}
 
 		// function to insert an element 
 		// at the rear of the queue 
-		public void qEnqueue(int data)
+		public void qEnqueue(T data)
 		{
 			// checks if the queue is full or not 
-			if (size == last)
+			if (size.Equals(last))
 			{
 				Console.WriteLine("Queue is full");
 				return;
@@ -36,7 +36,7 @@ namespace ComplexDataStructurees
 			// insert element at the rear 
 			else
 			{
-				queue[last] = data;
+                queue[last] = data;
 				last++;
 			}
 			return;
@@ -64,7 +64,7 @@ namespace ComplexDataStructurees
 
 				// store 0 at rear indicating there's no element 
 				if (last < size)
-					queue[last] = 0;
+					queue[last] = default;
 
 				// decrement rear 
 				last--;

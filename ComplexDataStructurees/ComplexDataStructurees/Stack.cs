@@ -9,17 +9,17 @@ namespace ComplexDataStructurees
 
 namespace StackImplementation 
 { 
-	public class Stack 
+	public class Stack<T>
 	{
 		private static int Size;
 		private static int top;
-		private	int[] stack;
+		private	T[] stack;
 
             public Stack(int s)
             {
 				top = -1;
 				Size = s;
-				stack = new int[Size];
+				stack = new T[Size];
             }
 
 		public bool IsEmpty() // this returns if the stack is empty or not
@@ -27,7 +27,7 @@ namespace StackImplementation
 			return (top < 0); 
 		} 
 		
-		public bool Push(int data) // this method adds item to the bigining of the stack
+		public bool Push(T data) // this method adds item to the bigining of the stack
 		{ 
 			if (top >= Size) 
 			{ 
@@ -46,17 +46,17 @@ namespace StackImplementation
 				return Size;
         }
 
-		public int Pop() // this method removes the last element added to the stack
+		public T Pop() // this method removes the last element added to the stack
 		{ 
 			if (top < 0) 
 			{ 
 				Console.WriteLine("Stack is empty"); 
-				return 0; 
+				return default; 
 			} 
 			else
 			{ 
-				int value = stack[top--]; 
-				return value; 
+				T value = stack[top--]; 
+				return  value; 
 			} 
 		} 
 
