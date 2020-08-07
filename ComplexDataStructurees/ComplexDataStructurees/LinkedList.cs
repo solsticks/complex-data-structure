@@ -11,7 +11,7 @@ namespace ComplexDataStructurees
     {
         public Nodes<T> Head { get; set; } // This is the first node in my list
         public Nodes<T> Tail { get; set; } // this is the last node in my list
-        public bool isEmpty { get; private set; }
+        public bool isEmpty = true;
 
         public int Count { get; private set; } // this takes the number of elements in my list
        
